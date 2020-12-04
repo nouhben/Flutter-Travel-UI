@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../shared/size_config.dart';
 import '../../../shared/size_config.dart';
+import '../../../shared/size_config.dart';
+import '../../../shared/size_config.dart';
+import '../../../shared/size_config.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -9,6 +12,8 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         Stack(
+          overflow: Overflow
+              .visible, //So when the container down is -15px down i can still see it
           alignment: Alignment.center,
           children: [
             Image.asset(
@@ -36,6 +41,14 @@ class Body extends StatelessWidget {
                       ),
                 ),
               ],
+            ),
+            Positioned(
+              bottom: getProportionateScreenWidth(-15),
+              child: Container(
+                height: getProportionateScreenWidth(50),
+                width: SizeConfig.screenWidth * .75,
+                color: Colors.red,
+              ),
             ),
           ],
         ),
