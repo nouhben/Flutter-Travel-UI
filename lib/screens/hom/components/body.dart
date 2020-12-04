@@ -1,7 +1,7 @@
+import 'package:animation_day_night/shared/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-import '../../../shared/size_config.dart';
-import '../../../shared/size_config.dart';
 import '../../../shared/size_config.dart';
 import '../../../shared/size_config.dart';
 import '../../../shared/size_config.dart';
@@ -45,9 +45,35 @@ class Body extends StatelessWidget {
             Positioned(
               bottom: getProportionateScreenWidth(-15),
               child: Container(
-                height: getProportionateScreenWidth(50),
+                height: getProportionateScreenWidth(56.0),
                 width: SizeConfig.screenWidth * .75,
-                color: Colors.red,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(color: kTextColor),
+                  boxShadow: [kDefaultShadow],
+                ),
+                child: TextField(
+                  onChanged: (value) {},
+                  decoration: InputDecoration(
+                    hintText: 'Search you destination?',
+                    fillColor: kTextColor,
+                    focusColor: kTextColor,
+                    suffixIcon: Icon(
+                      Icons.search,
+                      color: kIconColor,
+                    ),
+                    disabledBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    focusedErrorBorder: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: getProportionateScreenWidth(kDefaultPadding),
+                      vertical:
+                          getProportionateScreenHeight(kDefaultPadding / 2),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
