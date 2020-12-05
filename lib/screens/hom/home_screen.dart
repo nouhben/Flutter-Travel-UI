@@ -29,46 +29,75 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        selectedItemColor: kPrimaryColor,
-        unselectedItemColor: kPrimaryColor.withOpacity(.60),
-        selectedFontSize: 14,
-        unselectedFontSize: 14,
-        onTap: (value) {
-          print(value);
-        },
-        items: [
-          BottomNavigationBarItem(
-            label: 'Calendar',
-            icon: SvgPicture.asset(
-              'assets/icons/calendar.svg',
-              width: 28,
-              height: 28,
-              color: kTextColor,
-            ),
+      bottomNavigationBar: CustomBottomNavigationBar(),
+    );
+  }
+}
+
+class CustomBottomNavigationBar extends StatefulWidget {
+  const CustomBottomNavigationBar({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  _CustomBottomNavigationBarState createState() =>
+      _CustomBottomNavigationBarState();
+}
+
+enum NavigationItems { CHAT, CALENDAR, FRIENDSHIP }
+
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  int _activeItem = 0;
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: Colors.white,
+      selectedItemColor: kPrimaryColor,
+      unselectedItemColor: kPrimaryColor.withOpacity(.30),
+      selectedFontSize: 14,
+      unselectedFontSize: 14,
+      currentIndex: _activeItem,
+      onTap: (value) {
+        setState(() {
+          _activeItem = value;
+        });
+      },
+      items: [
+        BottomNavigationBarItem(
+          label: 'Calendar',
+          icon: SvgPicture.asset(
+            'assets/icons/calendar.svg',
+            width: 28,
+            height: 28,
+            color: _activeItem == 0
+                ? kPrimaryColor
+                : kPrimaryColor.withOpacity(0.2),
           ),
-          BottomNavigationBarItem(
-            label: 'Home',
-            icon: SvgPicture.asset(
-              'assets/icons/chat.svg',
-              width: 28,
-              height: 28,
-              color: kTextColor,
-            ),
+        ),
+        BottomNavigationBarItem(
+          label: 'Chat',
+          icon: SvgPicture.asset(
+            'assets/icons/chat.svg',
+            width: 28,
+            height: 28,
+            color: _activeItem == 1
+                ? kPrimaryColor
+                : kPrimaryColor.withOpacity(0.2),
           ),
-          BottomNavigationBarItem(
-            label: 'Friendship',
-            icon: SvgPicture.asset(
-              'assets/icons/friendship.svg',
-              width: 28,
-              height: 28,
-              color: kTextColor,
-            ),
+        ),
+        BottomNavigationBarItem(
+          label: 'Friendship',
+          icon: SvgPicture.asset(
+            'assets/icons/friendship.svg',
+            width: 28,
+            height: 28,
+            color: _activeItem == 2
+                ? kPrimaryColor
+                : kPrimaryColor.withOpacity(0.2),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
