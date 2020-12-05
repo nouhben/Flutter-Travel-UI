@@ -1,12 +1,9 @@
 import 'package:animation_day_night/components/travel_spot_card.dart';
 import 'package:animation_day_night/models/travel_spot.dart';
-import 'package:animation_day_night/shared/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared/size_config.dart';
-import '../../../shared/size_config.dart';
 import '../../../components/section_title.dart';
-import 'travelers.dart';
 
 class PopularPlaces extends StatelessWidget {
   const PopularPlaces({
@@ -35,6 +32,7 @@ class PopularPlaces extends StatelessWidget {
                     left: getProportionateScreenWidth(20),
                   ),
                   child: TravelSpotCard(
+                    isFullCard: false,
                     travelSpot: travelSpots[index],
                     onPress: () {},
                   ),
