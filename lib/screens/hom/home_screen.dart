@@ -1,3 +1,5 @@
+import 'package:animation_day_night/components/app_bar.dart';
+import 'package:animation_day_night/screens/events/events_screen.dart';
 import 'package:animation_day_night/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,23 +13,7 @@ class HomeScreen extends StatelessWidget {
     SizeConfig().init(context);
     return Scaffold(
       extendBodyBehindAppBar: true, //to allow items to go behind the app bar
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        leading: IconButton(
-          icon: SvgPicture.asset(
-            'assets/icons/menu.svg',
-            color: kIconColor,
-          ),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            icon: ClipOval(child: Image.asset('assets/images/profile.png')),
-            onPressed: () {},
-          ),
-        ],
-      ),
+      appBar: buildAppBar(isTransparent: true),
       body: Body(),
       bottomNavigationBar: CustomBottomNavigationBar(),
     );
@@ -44,7 +30,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
       _CustomBottomNavigationBarState();
 }
 
-enum NavigationItems { CHAT, CALENDAR, FRIENDSHIP }
+enum NavigationItems { CALENDAR, CHAT, FRIENDSHIP }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int _activeItem = 0;
@@ -62,6 +48,13 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         setState(() {
           _activeItem = value;
         });
+        if (value == NavigationItems.CALENDAR.index) {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => EventsScreen(),
+            ),
+          );
+        }
       },
       items: [
         BottomNavigationBarItem(
