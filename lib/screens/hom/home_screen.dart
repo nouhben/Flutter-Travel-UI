@@ -29,6 +29,46 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        selectedItemColor: kPrimaryColor,
+        unselectedItemColor: kPrimaryColor.withOpacity(.60),
+        selectedFontSize: 14,
+        unselectedFontSize: 14,
+        onTap: (value) {
+          print(value);
+        },
+        items: [
+          BottomNavigationBarItem(
+            label: 'Calendar',
+            icon: SvgPicture.asset(
+              'assets/icons/calendar.svg',
+              width: 28,
+              height: 28,
+              color: kTextColor,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: SvgPicture.asset(
+              'assets/icons/chat.svg',
+              width: 28,
+              height: 28,
+              color: kTextColor,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: 'Friendship',
+            icon: SvgPicture.asset(
+              'assets/icons/friendship.svg',
+              width: 28,
+              height: 28,
+              color: kTextColor,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
