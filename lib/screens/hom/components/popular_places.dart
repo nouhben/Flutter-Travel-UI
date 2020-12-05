@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../../shared/size_config.dart';
 import '../../../shared/size_config.dart';
-import 'section_title.dart';
+import '../../../components/section_title.dart';
 import 'travelers.dart';
 
 class PopularPlaces extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:animation_day_night/shared/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../../shared/size_config.dart';
+import '../shared/size_config.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
