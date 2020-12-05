@@ -8,6 +8,7 @@ import '../../shared/size_config.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
+  static final String routeName = '/home';
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -15,14 +16,18 @@ class HomeScreen extends StatelessWidget {
       extendBodyBehindAppBar: true, //to allow items to go behind the app bar
       appBar: buildAppBar(isTransparent: true),
       body: Body(),
-      bottomNavigationBar: CustomBottomNavigationBar(),
+      bottomNavigationBar: CustomBottomNavigationBar(
+        whichRout: HomeScreen.routeName,
+      ),
     );
   }
 }
 
 class CustomBottomNavigationBar extends StatefulWidget {
+  final String whichRout;
   const CustomBottomNavigationBar({
     Key key,
+    this.whichRout,
   }) : super(key: key);
 
   @override
@@ -30,10 +35,20 @@ class CustomBottomNavigationBar extends StatefulWidget {
       _CustomBottomNavigationBarState();
 }
 
-enum NavigationItems { CALENDAR, CHAT, FRIENDSHIP }
+enum NavigationItems { EVENTS, CHAT, FRIENDSHIP }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int _activeItem = 0;
+  @override
+  void initState() {
+    super.initState();
+    if (widget.whichRout == EventsScreen.routeName) {
+      _activeItem = 0;
+    } else {
+      _activeItem = 1;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
@@ -48,7 +63,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         setState(() {
           _activeItem = value;
         });
-        if (value == NavigationItems.CALENDAR.index) {
+        if (value == NavigationItems.EVENTS.index &&
+            EventsScreen.routeName != widget.whichRout) {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => EventsScreen(),
