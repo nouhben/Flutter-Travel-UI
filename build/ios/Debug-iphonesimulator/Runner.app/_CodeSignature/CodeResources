@@ -126,7 +126,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		qlP7xDH1vCuKf+lo3rnmtoA6sKQ=
+		mk/ba0rSwH5eYILo1X5cNSULDQw=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ZEyPuqPq9byENFZRMjPmL+5AIjw=
+		h/51zNQMW/wgy6k3RjrP+I4CxfA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -266,7 +266,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		5eLTJUa8GR0kpkde/jH67IDwhBk=
+		Sh7DjzvHIUBO6Lm+tusgIEeeRzw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -330,7 +330,7 @@
 		</data>
 		<key>Frameworks/path_provider.framework/path_provider</key>
 		<data>
-		GX8vIxJ7UxfCAeu8rxrtG4eUeKQ=
+		ut/vIcww1i+Cn1n1aKH1f20vlOw=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -677,11 +677,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qlP7xDH1vCuKf+lo3rnmtoA6sKQ=
+			mk/ba0rSwH5eYILo1X5cNSULDQw=
 			</data>
 			<key>hash2</key>
 			<data>
-			SKBkSUCcd/wCYhFWCv05ilDqQ/oAV4cztvH0aHdNIx8=
+			UufucgzJpFnPWdwQVWaF+SjlTvnKIWtU1PRr4edB87k=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -699,11 +699,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZEyPuqPq9byENFZRMjPmL+5AIjw=
+			h/51zNQMW/wgy6k3RjrP+I4CxfA=
 			</data>
 			<key>hash2</key>
 			<data>
-			JZ5KhKWmh2UeGjGfVB/BlRelRxCNulqkUdyIpxOi5dM=
+			ihGZQnVQwJHBUejCuYZsPQU3xasU6pUUigZzNs4Kk8Q=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -1062,11 +1062,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5eLTJUa8GR0kpkde/jH67IDwhBk=
+			Sh7DjzvHIUBO6Lm+tusgIEeeRzw=
 			</data>
 			<key>hash2</key>
 			<data>
-			3Q/42dhZLjXVQIJnL4ry7ebr+LKRDNFlsIHHew3zwU0=
+			Ks+GSEvL9WNiAF48yiBmA4wz6jwmhuv+PJwmvtck1qY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -1238,11 +1238,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GX8vIxJ7UxfCAeu8rxrtG4eUeKQ=
+			ut/vIcww1i+Cn1n1aKH1f20vlOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			8elCeuV4rnc/Wbma/1zTDGjUkFLee9lWqOctpUhIlQM=
+			hxbxaSdZCpFnMo0dTYr985BsZk8GacHHjxSga8Csy3A=
 			</data>
 		</dict>
 	</dict>
